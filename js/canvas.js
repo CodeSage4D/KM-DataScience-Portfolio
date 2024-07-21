@@ -120,3 +120,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     };
 });
+
+
+// Earth footer code

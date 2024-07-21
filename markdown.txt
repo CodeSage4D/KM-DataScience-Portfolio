@@ -6,3 +6,8 @@ portfolio/
 │   └── scripts.js
 └── images/
     └── (your images here)
+
+
+<div class="container">
+            <p>&copy; 2024 Karan Mishra. All rights reserved.</p>
+        </div>
