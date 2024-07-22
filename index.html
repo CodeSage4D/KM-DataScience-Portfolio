@@ -8,7 +8,27 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script> -->
+    <!-- using for earth with inline css and script import planetry.js -->
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://d3js.org/topojson.v1.min.js"></script>
+    <script src="https://rawgit.com/BinaryMuse/planetary.js/v1.1.2/dist/planetaryjs.min.js"></script>
+    <style>
+        /* body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #111;
+        color: #fff;
+      } */
+        #rotatingGlobe {
+            cursor: move;
+        }
+    </style>
 </head>
 
 <body>
@@ -316,37 +336,102 @@
 
 
     <!-- Contact Section -->
-    <section id="contact">
-        <div class="contact-container">
-            <h2 style="color: black;">Contact Me</h2>
-            <p>I'd love to hear from you! Feel free to reach out for collaborations, inquiries, or just to say hello.
-            </p>
-            <div class="contact-form">
-                <form action="https://formspree.io/f/your-form-id" method="post">
-                    <label style="color: black;" for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
+    <!-- <section id="contact">
+    <div class="contact-container">
+        <h2 style="color: black;">Contact Me</h2>
+        <p>I'd love to hear from you! Feel free to reach out for collaborations, inquiries, or just to say hello.</p>
+        <div class="contact-form">
+            <form id="contactForm" action="https://formspree.io/f/your-form-id" method="post">
+                <label style="color: black;" for="name">Name</label>
+                <input type="text" id="name" name="name" required>
 
-                    <label style="color: black;" for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                <label style="color: black;" for="email">Email</label>
+                <input type="email" id="email" name="email" required>
 
-                    <label style="color: black;" for="message">Message</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
+                <label style="color: black;" for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
 
-                    <button type="submit">Send Message</button>
-                </form>
+                <button type="submit">Send Message</button>
+            </form>
+            <div id="formResponse" style="color: black; margin-top: 10px;"></div>
+        </div>
+    </div>
+</section> -->
+    <!-- Contact Section -->
+    <!-- Contact Section -->
+<!-- Contact Section -->
+<section id="contact">
+    <div class="contact-container">
+        <h2 style="color: black;">Contact Me</h2>
+        <p>I'd love to hear from you! Feel free to reach out for collaborations, inquiries, or just to say hello.</p>
+        <div class="contact-form">
+            <form action="script.php" method="post">
+                <label style="color: black;" for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label style="color: black;" for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label style="color: black;" for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+    
+    <!-- Footer Section -->
+    <!-- <footer>
+    <div class="footer-content">
+        <div class="earth-container">
+            <div id="earth"></div>
+            <canvas id="satelliteCanvas" width="300" height="300"></canvas>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/itsgkaranmishra4" target="_blank"><i
+                    class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/CodeSage4D" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/itsgkaranmishra" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://t.me/codesag7" target="_blank"><i class="fab fa-telegram"></i></a>
+        </div>
+    </div>
+
+    <div class="container">
+        <p>&copy; 2024 Karan Mishra. All rights reserved.</p>
+    </div>
+    </footer> -->
+
+    <!-- <footer>
+        <div class="footer-content">
+            <div class="neural-network-container">
+                <canvas id="neuralNetworkCanvas"></canvas>
+            </div>
+            
+            <div class="line-graph-container">
+                <canvas id="lineGraphCanvas"></canvas>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/itsgkaranmishra4" target="_blank" title="LinkedIn"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/CodeSage4D" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/itsgkaranmishra" target="_blank" title="Instagram"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://t.me/codesag7" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
             </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <!-- Footer Section -->
-    <!-- Footer Section -->
+        <div class="container">
+            <p>&copy; 2024 Karan Mishra. All rights reserved.</p>
+        </div>
+    </footer> -->
+
     <footer>
         <div class="footer-content">
             <div class="earth-container">
-                <div id="earth"></div>
-                <canvas id="satelliteCanvas" width="300" height="300"></canvas>
+                <canvas id="satelliteCanvas"></canvas>
             </div>
+            <div class="neural-network"></div>
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/itsgkaranmishra4" target="_blank"><i
                         class="fab fa-linkedin"></i></a>
@@ -355,11 +440,14 @@
                 <a href="https://t.me/codesag7" target="_blank"><i class="fab fa-telegram"></i></a>
             </div>
         </div>
-
+        <div class="chart-container">
+            <canvas id="lineChart"></canvas>
+        </div>
         <div class="container">
             <p>&copy; 2024 Karan Mishra. All rights reserved.</p>
         </div>
     </footer>
+
 
     <script>
         AOS.init({
@@ -367,9 +455,13 @@
         });
     </script>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
     <script src="js/canvas.js"></script>
     <script src="js/scripts.js"></script>
     <script src="js/earth.js"></script>
+    <script src="js/Email.js"></script>
 </body>
 
 </html>
