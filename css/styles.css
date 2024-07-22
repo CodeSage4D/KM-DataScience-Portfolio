@@ -948,7 +948,7 @@ section {
 
 
 /* Footer */
-/* footer {
+footer {
     background-color: #000a14; 
     color: #ffffff;
     padding: 20px;
@@ -1074,7 +1074,7 @@ footer p {
     to {
         transform: rotate(360deg);
     }
-} */
+}
 
 /* Footer Section */
 footer {
@@ -1109,6 +1109,11 @@ footer {
     box-shadow: inset 8px 36px 80px 36px rgb(0, 0, 0), inset -6px 0 12px 4px rgba(255, 255, 255, 0.3);
     animation: rotate 12s linear infinite;
 }
+
+.social-icons a:hover {
+    color: #007FFF;
+}
+
 
 @keyframes rotate {
     from { background-position: 0 0; }
